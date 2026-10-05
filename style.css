@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f5f6;
-  color: #202932;
+  background: #090909;
+  color: #eeeeee;
   line-height: 1.6;
 }
 
@@ -26,11 +26,13 @@ a {
 }
 
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 
 .site-header {
-  background: #f4f5f6;
-  border-bottom: 1px solid #d7dce0;
+  background: #090909;
+  border-bottom: 1px solid #202020;
 }
 
 .nav-container {
@@ -44,29 +46,36 @@ a {
 .logo {
   font-size: 16px;
   font-weight: 600;
-  letter-spacing: -0.2px;
+  color: #ffffff;
+}
+
+.logo:hover {
+  color: #e43b3b;
 }
 
 nav {
   display: flex;
-  gap: 28px;
+  gap: 30px;
 }
 
 nav a {
   font-size: 14px;
-  color: #626b74;
+  color: #858585;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #202932;
+  color: #ffffff;
 }
 
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  padding: 125px 0 140px;
-  border-bottom: 1px solid #d7dce0;
+  padding: 125px 0 135px;
+  border-bottom: 1px solid #202020;
 }
 
 .hero-content {
@@ -78,88 +87,113 @@ nav a:hover {
 
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1.8px;
-  color: #637589;
+  letter-spacing: 2px;
+  color: #e43b3b;
 }
 
 .hero h1 {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
-  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(52px, 8vw, 82px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -3px;
+  color: #ffffff;
 }
 
 .hero-description {
   max-width: 650px;
 
-  font-size: 19px;
-  color: #5f6871;
+  font-size: 18px;
+  color: #999999;
 }
 
 .hero-links {
   display: flex;
-  gap: 26px;
-  margin-top: 36px;
+  gap: 28px;
+  margin-top: 38px;
 }
 
 .hero-links a {
+  position: relative;
+
+  padding-bottom: 5px;
+
   font-size: 14px;
   font-weight: 600;
+  color: #ffffff;
+}
 
-  padding-bottom: 4px;
-  border-bottom: 1px solid #273544;
+.hero-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: #e43b3b;
+
+  transition: width 0.2s ease;
 }
 
 .hero-links a:hover {
-  color: #637589;
-  border-color: #637589;
+  color: #e43b3b;
 }
 
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
   padding: 100px 0;
-  border-bottom: 1px solid #d7dce0;
+  border-bottom: 1px solid #202020;
 }
 
 .section-title {
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-
-  margin-bottom: 55px;
-}
-
-.section-title span {
-  font-size: 12px;
-  color: #87919a;
+  margin-bottom: 50px;
 }
 
 .section-title h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-  font-weight: 500;
-  letter-spacing: -1px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.section-title h2::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 4px;
+  height: 24px;
+
+  margin-right: 12px;
+
+  background: #e43b3b;
+
+  vertical-align: -2px;
 }
 
 .section-intro {
   max-width: 680px;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 
-  font-size: 16px;
-  color: #68727b;
+  font-size: 15px;
+  color: #888888;
 }
 
 
-/* About */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(250px, 0.8fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(230px, 0.8fr);
   gap: 100px;
 }
 
@@ -170,13 +204,13 @@ nav a:hover {
 .about-grid p {
   margin-bottom: 22px;
 
-  font-size: 17px;
-  color: #58636c;
+  font-size: 16px;
+  color: #a0a0a0;
 }
 
 .about-details {
-  border-left: 1px solid #d7dce0;
   padding-left: 30px;
+  border-left: 1px solid #292929;
 }
 
 .about-details div {
@@ -185,38 +219,39 @@ nav a:hover {
 
 .about-details span {
   display: block;
-  margin-bottom: 3px;
+
+  margin-bottom: 4px;
 
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #8a939b;
+  letter-spacing: 1.3px;
+  color: #666666;
 }
 
 .about-details strong {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  color: #dddddd;
 }
 
 
-/* Projects */
+/* =========================
+   PROJECTS
+========================= */
 
 .project {
   display: grid;
-  grid-template-columns: 75px minmax(0, 1fr);
+  grid-template-columns: 1fr auto;
 
-  padding: 42px 0;
+  gap: 40px;
 
-  border-top: 1px solid #d7dce0;
+  padding: 38px 0;
+
+  border-top: 1px solid #202020;
 }
 
 .project:last-child {
-  border-bottom: 1px solid #d7dce0;
-}
-
-.project-number {
-  font-size: 13px;
-  color: #8b949b;
+  border-bottom: 1px solid #202020;
 }
 
 .project-content {
@@ -225,57 +260,68 @@ nav a:hover {
 
 .project-header {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   justify-content: space-between;
 
   gap: 30px;
-  margin-bottom: 15px;
+
+  margin-bottom: 13px;
 }
 
 .project-header h3 {
-  margin-bottom: 3px;
-
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .project-type {
-  font-size: 13px;
-  color: #87919a;
+  margin-top: 3px;
+
+  font-size: 12px;
+  color: #666666;
 }
 
 .project-tech {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  color: #637589;
+  color: #e43b3b;
 }
 
 .project-content > p {
   max-width: 720px;
 
   font-size: 15px;
-  color: #5f6871;
+  color: #929292;
 }
+
+
+/* Simple text instead of AI-looking pill tags */
 
 .project-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
 
-  margin-top: 22px;
+  gap: 10px;
+
+  margin-top: 20px;
 }
 
 .project-skills span {
-  padding: 5px 9px;
-
-  border: 1px solid #ccd2d7;
-
   font-size: 11px;
-  color: #66717a;
+  color: #676767;
+}
+
+.project-skills span:not(:last-child)::after {
+  content: "/";
+  margin-left: 10px;
+
+  color: #333333;
 }
 
 
-/* Skills */
+/* =========================
+   SKILLS
+========================= */
 
 .skills-grid {
   display: grid;
@@ -284,58 +330,68 @@ nav a:hover {
 }
 
 .skill-group {
-  border-top: 2px solid #273544;
+  border-top: 1px solid #353535;
   padding-top: 18px;
 }
 
 .skill-group h3 {
   margin-bottom: 20px;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: #e43b3b;
 }
 
 .skill-group p {
   margin-bottom: 8px;
 
   font-size: 14px;
-  color: #657078;
+  color: #8d8d8d;
 }
 
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section {
   padding-bottom: 130px;
 }
 
 .contact-text {
-  max-width: 590px;
-  margin-bottom: 22px;
+  max-width: 600px;
+  margin-bottom: 20px;
 
   font-size: 16px;
-  color: #626d76;
+  color: #909090;
 }
 
 .email {
   display: inline-block;
 
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
 
-  border-bottom: 1px solid #273544;
+  color: #ffffff;
+
+  border-bottom: 1px solid #e43b3b;
   padding-bottom: 3px;
 }
 
 .email:hover {
-  color: #637589;
+  color: #e43b3b;
 }
 
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  background: #e9ecee;
+  background: #060606;
 }
 
 .footer-content {
@@ -346,11 +402,13 @@ footer {
   justify-content: space-between;
 
   font-size: 12px;
-  color: #778189;
+  color: #5f5f5f;
 }
 
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
@@ -361,11 +419,10 @@ footer {
   .nav-container {
     height: auto;
     padding: 18px 0;
-    align-items: flex-start;
   }
 
   nav {
-    gap: 14px;
+    gap: 15px;
   }
 
   nav a {
@@ -394,13 +451,16 @@ footer {
   }
 
   .about-details {
+    padding-left: 0;
+    padding-top: 25px;
+
     border-left: none;
-    border-top: 1px solid #d7dce0;
-    padding: 25px 0 0;
+    border-top: 1px solid #292929;
   }
 
   .project {
-    grid-template-columns: 45px minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .project-header {
@@ -408,7 +468,7 @@ footer {
   }
 
   .project-tech {
-    margin-top: 8px;
+    margin-top: 7px;
   }
 
   .skills-grid {
@@ -417,8 +477,9 @@ footer {
   }
 
   .footer-content {
+    padding: 20px 0;
+
     gap: 10px;
     flex-wrap: wrap;
-    padding: 20px 0;
   }
 }
