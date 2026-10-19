@@ -3,407 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-f
-    <title>Adam Ibrahim — Game Programmer</title>
+    <meta name="theme-color" content="#080808">
+    <meta name="description" content="Adam Ibrahim's game programming portfolio.">
+    <title>Adam Ibrahim | Game Programming</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header class="site-header">
         <div class="header-inner">
+            <a class="site-name" href="#top">Adam Ibrahim</a>
 
-            <a href="#top" class="site-name">
-                Adam Ibrahim
-            </a>
-
-            <nav>
+            <nav aria-label="Main navigation">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
+                <a href="#tools">Tools</a>
                 <a href="#contact">Contact</a>
             </nav>
-
         </div>
     </header>
 
-
     <main id="top">
-
-        <!-- HERO -->
-
         <section class="hero">
             <div class="hero-inner">
-
                 <div class="hero-copy">
-                    <p class="small-label">GAME PROGRAMMING STUDENT</p>
-
-                    <h1>
-                        Hey, I'm Adam.
-                    </h1>
-
-                    <p class="hero-role">
-                        Game Programmer
-                    </p>
-
+                    <p class="eyebrow">GAME PROGRAMMING STUDENT</p>
+                    <h1 class="hero-title">Hey, I'm <span class="hero-name">Adam.</span></h1>
+                    <p class="hero-role">Game Programmer</p>
                     <p class="hero-description">
-                        I'm a Game Programming student at Humber College
-                        interested in gameplay programming, software
-                        development, and building interactive experiences.
+                        I'm studying Game Programming at Humber College and building my skills in
+                        C++, Lua, and game development. I'm interested in how games are built,
+                        from the code behind them to the experience players have.
                     </p>
-
                     <div class="hero-links">
-                        <a href="#projects">See my projects</a>
-                        <a href="mailto:adambsn1485@gmail.com">Get in touch</a>
+                        <a href="#projects">See my work <span aria-hidden="true">↘</span></a>
+                        <a href="mailto:adambsn1485@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
-
             </div>
         </section>
 
-
-        <!-- ABOUT -->
-
-        <section id="about" class="content-section">
+        <section id="about" class="content-section reveal">
             <div class="content-width">
-
                 <div class="section-heading">
                     <h2>Self Summary</h2>
                 </div>
 
-                <div class="about-layout">
-
+                <div class="about-grid">
                     <div class="about-main">
-
-                        <p class="large-paragraph">
-                            I'm currently studying Game Programming at
-                            Humber College, where I'm building a foundation
-                            in C++, software development, mathematics,
-                            and game technology.
+                        <p class="lead">
+                            I'm a <strong>Game Programming student at Humber College</strong>,
+                            developing a foundation in C++, software development, and game technology.
                         </p>
-
                         <p>
-                            Most of my work revolves around programming.
-                            I enjoy figuring out how systems work, breaking
-                            down problems, and turning ideas into something
-                            that actually runs.
+                            Most of my work involves programming and building things hands-on. I enjoy
+                            working through problems, understanding how systems fit together, and turning
+                            an idea into something playable or useful.
                         </p>
-
                         <p>
-                            Outside of coursework, I spend a lot of time
-                            developing games and experimenting with different
-                            programming ideas. I'm particularly interested
-                            in gameplay programming and the engineering
-                            behind games.
+                            Outside of coursework, I've been developing projects in Roblox Studio and
+                            learning more about the tools used throughout game development. I'm interested
+                            in gameplay programming and the engineering that helps a game feel consistent
+                            and responsive to the player.
                         </p>
-
                     </div>
 
-                    <aside class="about-side">
-
+                    <aside class="about-details" aria-label="Background">
                         <div class="info-block">
-                            <span>Currently studying</span>
-                            <strong>Game Programming</strong>
-                            <p>Humber College</p>
+                            <span>Education</span>
+                            <strong>Humber College</strong>
+                            <p>Game Programming</p>
                         </div>
-
                         <div class="info-block">
-                            <span>Based in</span>
-                            <strong>Toronto, Canada</strong>
+                            <span>Languages</span>
+                            <strong>C++ and Lua</strong>
                         </div>
-
                         <div class="info-block">
-                            <span>Interested in</span>
+                            <span>Area of interest</span>
                             <strong>Gameplay Programming</strong>
-                            <p>Software Development</p>
                         </div>
-
                     </aside>
-
                 </div>
-
             </div>
         </section>
 
-
-        <!-- FEATURED PROJECTS -->
-
-        <section id="projects" class="content-section">
+        <section id="projects" class="content-section reveal">
             <div class="content-width">
-
-                <div class="section-heading project-heading">
+                <div class="section-heading section-heading--projects">
                     <div>
                         <h2>Featured Projects</h2>
-
-                        <p>
-                            A selection of academic and independent work.
-                        </p>
+                        <p>Academic and independent work.</p>
                     </div>
                 </div>
 
-
-                <!-- PROJECT -->
-
                 <article class="project">
-
-                    <div class="project-preview">
-                        <div class="project-preview-placeholder">
-                            <span>PROJECT IMAGE</span>
-                        </div>
+                    <div class="project-visual project-visual--cpp" aria-label="C++ project artwork">
+                        <span class="visual-kicker">GAME PROGRAMMING</span>
+                        <span class="visual-main">C++</span>
+                        <span class="visual-foot">INTERACTIVE SOFTWARE</span>
                     </div>
-
                     <div class="project-details">
-
-                        <div class="project-title-row">
-                            <div>
-                                <h3>Game Programming Projects</h3>
-                                <p class="project-subtitle">
-                                    C++ · Academic
-                                </p>
-                            </div>
-                        </div>
-
+                        <p class="project-type">Academic work · C++</p>
+                        <h3>Game Programming Projects</h3>
                         <p>
-                            A collection of projects developed throughout
-                            my Game Programming studies. These projects
-                            focus on applying programming fundamentals to
-                            interactive software and improving my ability
-                            to design, implement, and maintain game code.
+                            Projects developed while studying game programming, applying programming
+                            fundamentals to interactive software and building experience with code
+                            structure, implementation, and debugging.
                         </p>
-
-                        <div class="project-meta">
-                            <span>C++</span>
-                            <span>Object-Oriented Programming</span>
-                            <span>Data Structures</span>
-                            <span>Algorithms</span>
-                        </div>
-
-                        <a href="#" class="project-link">
-                            View project →
-                        </a>
-
+                        <p class="project-meta">C++ <span>·</span> Object-oriented programming <span>·</span> Game development</p>
                     </div>
-
                 </article>
 
-
-                <!-- PROJECT -->
-
                 <article class="project">
-
-                    <div class="project-preview">
-                        <div class="project-preview-placeholder">
-                            <span>PROJECT IMAGE</span>
-                        </div>
+                    <div class="project-visual project-visual--lua" aria-label="Lua game development artwork">
+                        <span class="visual-kicker">INDEPENDENT DEVELOPMENT</span>
+                        <span class="visual-main">Lua</span>
+                        <span class="visual-foot">ROBLOX STUDIO</span>
                     </div>
-
                     <div class="project-details">
-
-                        <div class="project-title-row">
-                            <div>
-                                <h3>Roblox Development</h3>
-                                <p class="project-subtitle">
-                                    Lua · Independent
-                                </p>
-                            </div>
-                        </div>
-
+                        <p class="project-type">Independent work · Lua</p>
+                        <h3>Roblox Game Development</h3>
                         <p>
-                            Independent game development work created in
-                            Roblox Studio. These projects have given me
-                            practical experience building interactive
-                            software, testing ideas, and working through
-                            the complete development process.
+                            Independent projects built in Roblox Studio, exploring gameplay programming,
+                            interactive systems, and the process of taking game ideas from an early
+                            concept to a playable result.
                         </p>
-
-                        <div class="project-meta">
-                            <span>Lua</span>
-                            <span>Roblox Studio</span>
-                            <span>Gameplay Programming</span>
-                        </div>
-
-                        <a href="#" class="project-link">
-                            View project →
-                        </a>
-
+                        <p class="project-meta">Lua <span>·</span> Roblox Studio <span>·</span> Gameplay programming</p>
                     </div>
-
                 </article>
 
-
-                <!-- PROJECT -->
-
-                <article class="project">
-
-                    <div class="project-preview">
-                        <div class="project-preview-placeholder">
-                            <span>PROJECT IMAGE</span>
-                        </div>
+                <article class="project project--last">
+                    <div class="project-visual project-visual--data" aria-label="Data structures project artwork">
+                        <span class="visual-kicker">PROGRAMMING FUNDAMENTALS</span>
+                        <span class="visual-main">{ }</span>
+                        <span class="visual-foot">DATA STRUCTURES &amp; ALGORITHMS</span>
                     </div>
-
                     <div class="project-details">
-
-                        <div class="project-title-row">
-                            <div>
-                                <h3>Data Structures & Algorithms</h3>
-                                <p class="project-subtitle">
-                                    C++ · Coursework
-                                </p>
-                            </div>
-                        </div>
-
+                        <p class="project-type">Coursework · C++</p>
+                        <h3>Data Structures &amp; Algorithms</h3>
                         <p>
-                            Academic work focused on fundamental data
-                            structures, algorithms, problem solving, and
-                            writing organized and maintainable code in C++.
+                            Coursework focused on understanding and implementing core data structures
+                            and algorithms, with an emphasis on problem solving and writing clear,
+                            maintainable code.
                         </p>
-
-                        <div class="project-meta">
-                            <span>C++</span>
-                            <span>Algorithms</span>
-                            <span>Problem Solving</span>
-                        </div>
-
-                        <a href="#" class="project-link">
-                            View project →
-                        </a>
-
+                        <p class="project-meta">C++ <span>·</span> Data structures <span>·</span> Algorithms</p>
                     </div>
-
                 </article>
-
             </div>
         </section>
 
-
-        <!-- OTHER WORK -->
-
-        <section class="content-section showcase-section">
+        <section class="content-section other-work-section reveal">
             <div class="content-width">
-
                 <div class="section-heading">
                     <h2>Other Work</h2>
                 </div>
 
-                <div class="small-projects">
-
-                    <div class="small-project">
+                <div class="other-work-list">
+                    <article class="other-work-item">
                         <div>
                             <h3>Game Development Experiments</h3>
-                            <p>
-                                Smaller programming experiments and
-                                prototypes exploring different areas
-                                of game development.
-                            </p>
+                            <p>Small prototypes and experiments exploring ideas in game development.</p>
                         </div>
-
                         <span>Lua / C++</span>
-                    </div>
-
-                    <div class="small-project">
+                    </article>
+                    <article class="other-work-item">
                         <div>
                             <h3>Programming Coursework</h3>
-                            <p>
-                                University and college assignments focused
-                                on programming fundamentals and software
-                                development.
-                            </p>
+                            <p>Assignments that build practical experience with programming fundamentals.</p>
                         </div>
-
                         <span>C++</span>
-                    </div>
-
+                    </article>
                 </div>
-
             </div>
         </section>
 
-
-        <!-- SKILLS -->
-
-        <section id="skills" class="content-section skills-section">
+        <section id="tools" class="content-section tools-section reveal">
             <div class="content-width">
-
                 <div class="section-heading">
-                    <h2>Skills</h2>
+                    <h2>Tools &amp; Languages</h2>
+                    <p>Software and languages I have experience using.</p>
                 </div>
 
-                <div class="skills-layout">
-
-                    <div class="skills-column">
-                        <h3>Programming</h3>
-
-                        <p>C++</p>
-                        <p>Lua</p>
-                        <p>Object-Oriented Programming</p>
-                        <p>Data Structures</p>
-                        <p>Algorithms</p>
-                    </div>
-
-                    <div class="skills-column">
-                        <h3>Game Development</h3>
-
-                        <p>Gameplay Programming</p>
-                        <p>Game Systems</p>
-                        <p>Roblox Studio</p>
-                        <p>Interactive Software</p>
-                    </div>
-
-                    <div class="skills-column">
-                        <h3>Tools</h3>
-
-                        <p>Git</p>
-                        <p>GitHub</p>
-                        <p>Visual Studio</p>
-                        <p>VS Code</p>
-                    </div>
-
+                <div class="tools-grid">
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/lua.svg" alt="" width="68" height="68"></div>
+                        <h3>Lua</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/cplusplus.svg" alt="" width="68" height="68"></div>
+                        <h3>C++</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/roblox-studio.svg" alt="" width="68" height="68"></div>
+                        <h3>Roblox Studio</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/visual-studio.svg" alt="" width="68" height="68"></div>
+                        <h3>Visual Studio</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/git.svg" alt="" width="68" height="68"></div>
+                        <h3>Git</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/3ds-max.svg" alt="" width="68" height="68"></div>
+                        <h3>3ds Max</h3>
+                    </article>
+                    <article class="tool-card">
+                        <div class="tool-image"><img src="assets/icons/blender.svg" alt="" width="68" height="68"></div>
+                        <h3>Blender</h3>
+                    </article>
                 </div>
-
             </div>
         </section>
 
-
-        <!-- CONTACT -->
-
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section reveal">
             <div class="content-width">
-
-                <h2>Get in touch.</h2>
-
-                <p>
-                    I'm currently building my portfolio and looking
-                    for opportunities to grow as a game programmer.
+                <p class="eyebrow">CONTACT</p>
+                <h2>Let's talk.</h2>
+                <p class="contact-copy">
+                    For opportunities, collaborations, or questions about my work, feel free to reach out.
                 </p>
-
-                <a
-                    href="mailto:adambsn1485@gmail.com"
-                    class="contact-email"
-                >
-                    adambsn1485@gmail.com
-                </a>
-
+                <a class="contact-email" href="mailto:adambsn1485@gmail.com">adambsn1485@gmail.com <span aria-hidden="true">↗</span></a>
             </div>
         </section>
-
     </main>
 
-
-    <footer>
+    <footer class="site-footer">
         <div class="footer-inner">
-            <span>Adam Ibrahim</span>
-            <span>Game Programming</span>
-            <span>© 2026</span>
+            <p>© 2026 Adam Ibrahim. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
