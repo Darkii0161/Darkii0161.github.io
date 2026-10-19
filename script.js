@@ -1,5 +1,24 @@
 "use strict";
 
+// If a remote product logo ever moves, try its alternate official logo URL.
+// If both URLs fail, show a visible text fallback instead of a blank white tile.
+document.querySelectorAll(".tool-image img[data-fallback]").forEach((img) => {
+    img.addEventListener("error", () => {
+        if (!img.dataset.fallbackTried) {
+            img.dataset.fallbackTried = "true";
+            img.src = img.dataset.fallback;
+            return;
+        }
+
+        img.hidden = true;
+        const fallback = document.createElement("span");
+        fallback.className = "tool-image-fallback";
+        fallback.textContent = "Roblox Studio";
+        img.parentElement.appendChild(fallback);
+    });
+});
+
+
 document.documentElement.classList.add("js");
 
 // The hero heading follows the pointer just a little on desktop.
