@@ -869,3 +869,338 @@ nav a:focus-visible::after {
         transform: none;
     }
 }
+
+
+/* Readability refinements: keep body copy bright enough on the dark background. */
+:root {
+    --muted: #c0c0c0;
+    --quiet: #969696;
+}
+
+body {
+    font-size: 17px;
+}
+
+nav a {
+    color: #b5b5b5;
+    font-size: 14px;
+}
+
+.hero-description {
+    color: #d0d0d0;
+    font-size: clamp(18px, 1.7vw, 20px);
+    line-height: 1.7;
+}
+
+.about-main p {
+    color: #c3c3c3;
+    font-size: 17px;
+    line-height: 1.78;
+}
+
+.about-main .lead {
+    color: #f0f0f0;
+    font-size: clamp(22px, 2.35vw, 27px);
+}
+
+.info-block strong {
+    color: #f0f0f0;
+    font-size: 15px;
+}
+
+.info-block p {
+    color: #bcbcbc;
+    font-size: 14px;
+}
+
+.section-heading > p,
+.section-heading div > p {
+    color: #c1c1c1;
+    font-size: 15px;
+}
+
+.project-details > p:not(.project-type):not(.project-meta) {
+    color: #c1c1c1;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.project-meta {
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+.other-work-item h3 {
+    font-size: 18px;
+}
+
+.other-work-item p {
+    color: #c0c0c0;
+    font-size: 15px;
+}
+
+.contact-copy {
+    color: #c9c9c9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.contact-email {
+    font-size: 16px;
+}
+
+/* Resume button with a soft, rising-water hover animation. */
+.hero-links .resume-button {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin-top: -8px;
+    padding: 11px 18px;
+    border: 1px solid #9c3333;
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    line-height: 1.2;
+    transition: border-color 260ms ease, transform 260ms ease, color 260ms ease;
+}
+
+.hero-links .resume-button::before,
+.hero-links .resume-button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -28%;
+    top: 112%;
+    width: 156%;
+    height: 210%;
+    border-radius: 43% 48% 0 0;
+    background: #c52b32;
+    transform: rotate(-6deg);
+    transition: top 650ms cubic-bezier(.18, .7, .23, 1), transform 900ms ease;
+    pointer-events: none;
+}
+
+.hero-links .resume-button::after {
+    left: -34%;
+    top: 124%;
+    width: 170%;
+    border-radius: 47% 43% 0 0;
+    background: #e23b3b;
+    opacity: 0.86;
+    transform: rotate(5deg);
+    transition-delay: 45ms;
+}
+
+.hero-links .resume-button__label,
+.hero-links .resume-button__arrow {
+    position: relative;
+    z-index: 1;
+    color: inherit;
+}
+
+.hero-links .resume-button__arrow {
+    transition: transform 220ms ease;
+}
+
+.hero-links .resume-button:hover,
+.hero-links .resume-button:focus-visible {
+    color: #fff;
+    border-color: #f06a6a;
+    transform: translateY(-2px);
+}
+
+.hero-links .resume-button:hover::before,
+.hero-links .resume-button:focus-visible::before {
+    top: -68%;
+    transform: rotate(0deg);
+    animation: wave-drift 4.3s linear infinite;
+}
+
+.hero-links .resume-button:hover::after,
+.hero-links .resume-button:focus-visible::after {
+    top: -78%;
+    transform: rotate(0deg);
+    animation: wave-drift-reverse 5s linear infinite;
+}
+
+.hero-links .resume-button:hover .resume-button__arrow,
+.hero-links .resume-button:focus-visible .resume-button__arrow {
+    transform: translate(2px, -2px);
+}
+
+.hero-links .resume-button:focus-visible {
+    outline: 2px solid #f06a6a;
+    outline-offset: 4px;
+}
+
+@keyframes wave-drift {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(3%) rotate(4deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes wave-drift-reverse {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(-3%) rotate(-4deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Product logos: keep the original brand colors and proportions. */
+.tools-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.tool-card {
+    min-height: 192px;
+    padding: 22px 22px 19px;
+    background: #0e0e0e;
+    border-color: #303030;
+    transition: opacity 420ms ease, transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.tool-card:hover {
+    border-color: #8a3636;
+    background: #131313;
+}
+
+.tool-image {
+    width: 102px;
+    height: 102px;
+    min-height: 102px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    border-radius: 10px;
+}
+
+.tool-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 260ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.tool-card:hover .tool-image img {
+    transform: scale(1.07);
+}
+
+.tool-image--wide {
+    width: 150px;
+    padding: 12px;
+}
+
+.tool-card h3 {
+    margin-top: 17px;
+    color: #f4f4f4;
+    font-size: 17px;
+    letter-spacing: -0.3px;
+}
+
+/* A small screen-reader-only label keeps the animated word from being noisy. */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.greeting-word {
+    display: inline-block;
+    min-width: 2.05ch;
+    color: inherit;
+}
+
+/* Tighter sections with stronger typography instead of extra decoration. */
+.content-section {
+    padding-top: 64px;
+    padding-bottom: 68px;
+}
+
+.section-heading {
+    margin-bottom: 34px;
+}
+
+.section-heading h2 {
+    font-size: clamp(36px, 4.2vw, 48px);
+    letter-spacing: -2px;
+}
+
+@media (max-width: 850px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .hero-links {
+        align-items: flex-start;
+        gap: 18px 20px;
+    }
+
+    .hero-links .resume-button {
+        margin-top: -7px;
+    }
+
+    .content-section {
+        padding-top: 56px;
+        padding-bottom: 60px;
+    }
+
+    .about-main p {
+        font-size: 16px;
+    }
+
+    .about-main .lead {
+        font-size: 22px;
+    }
+
+    .project-details > p:not(.project-type):not(.project-meta) {
+        font-size: 15px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tool-card {
+        min-height: 176px;
+        padding: 17px;
+    }
+
+    .tool-image {
+        width: 88px;
+        height: 88px;
+        min-height: 88px;
+        padding: 12px;
+    }
+
+    .tool-image--wide {
+        width: 132px;
+    }
+
+    .tool-card h3 {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-links .resume-button::before,
+    .hero-links .resume-button::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
