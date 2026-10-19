@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="Blender symbol">
+  <path d="M10 23H38L26 13M18 36H43L30 27M23 49C27 59 45 62 55 52C64 43 57 31 45 31C36 31 31 37 32 44" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="47" cy="43" r="13" fill="#101010" stroke="#fff" stroke-width="4"/>
+  <circle cx="47" cy="43" r="5" fill="#fff"/>
+</svg>

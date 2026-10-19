@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="Git symbol">
+  <g transform="rotate(45 36 36)">
+    <rect x="15" y="15" width="42" height="42" rx="3" fill="#fff"/>
+    <path d="M27 24V48M27 35H44V24" fill="none" stroke="#101010" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="27" cy="24" r="4.2" fill="#101010"/>
+    <circle cx="27" cy="48" r="4.2" fill="#101010"/>
+    <circle cx="44" cy="24" r="4.2" fill="#101010"/>
+  </g>
+</svg>
