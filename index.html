@@ -32,7 +32,7 @@
             <div class="hero-inner">
                 <div class="hero-copy">
                     <p class="eyebrow">GAME PROGRAMMING STUDENT</p>
-                    <h1 class="hero-title">Hey, I'm <span class="hero-name">Adam.</span></h1>
+                    <h1 class="hero-title"><span class="greeting-word" data-greeting aria-hidden="true">Hey</span><span class="visually-hidden">Hey</span>, I'm <span class="hero-name">Adam.</span></h1>
                     <p class="hero-role">Game Programmer</p>
                     <p class="hero-description">
                         I'm studying Game Programming at Humber College and building my skills in
@@ -41,6 +41,11 @@
                     </p>
                     <div class="hero-links">
                         <a href="#projects">See my work <span aria-hidden="true">↘</span></a>
+                        <!-- Add your resume PDF beside index.html and name it resume.pdf. -->
+                        <a class="resume-button" href="resume.pdf" target="_blank" rel="noopener">
+                            <span class="resume-button__label">View resume</span>
+                            <span class="resume-button__arrow" aria-hidden="true">↗</span>
+                        </a>
                         <a href="mailto:adambsn1485@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
                     </div>
                 </div>
@@ -189,32 +194,46 @@
                 </div>
 
                 <div class="tools-grid">
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/lua.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--lua">
+                        <div class="tool-image">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg" alt="Lua logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>Lua</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/cplusplus.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--cpp">
+                        <div class="tool-image">
+                            <img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg" alt="C++ logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>C++</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/roblox-studio.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--roblox">
+                        <div class="tool-image">
+                            <img src="https://cdn.jsdelivr.net/npm/@thesvg/icons/icons/roblox-studio.svg" alt="Roblox Studio logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>Roblox Studio</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/visual-studio.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--visual-studio">
+                        <div class="tool-image">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/visualstudio/visualstudio-original.svg" alt="Visual Studio logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>Visual Studio</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/git.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--git">
+                        <div class="tool-image">
+                            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg" alt="Git logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>Git</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/3ds-max.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--3dsmax">
+                        <div class="tool-image tool-image--wide">
+                            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Autodesk_3ds_Max_Logo.svg" alt="Autodesk 3ds Max logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>3ds Max</h3>
                     </article>
-                    <article class="tool-card">
-                        <div class="tool-image"><img src="assets/icons/blender.svg" alt="" width="68" height="68"></div>
+                    <article class="tool-card tool-card--blender">
+                        <div class="tool-image">
+                            <img src="https://download.blender.org/branding/square/blender_icon_512x512.png" alt="Blender logo" loading="lazy" decoding="async">
+                        </div>
                         <h3>Blender</h3>
                     </article>
                 </div>
