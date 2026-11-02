@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Project video preview placeholder</title>
+<desc id="desc">A dark background with a subtle red play symbol and the words project preview.</desc>
+<rect width="1600" height="900" fill="#090909"/>
+<g fill="none" stroke="#292929" stroke-width="2">
+  <circle cx="800" cy="450" r="230"/>
+  <circle cx="800" cy="450" r="310"/>
+  <circle cx="800" cy="450" r="390"/>
+</g>
+<circle cx="800" cy="410" r="64" fill="#e23b3b" opacity=".9"/>
+<path d="M780 374 L780 446 L835 410 Z" fill="#fff"/>
+<text x="800" y="540" fill="#eee" font-family="Arial, sans-serif" font-size="34" font-weight="600" text-anchor="middle" letter-spacing="4">PROJECT PREVIEW</text>
+<text x="800" y="590" fill="#777" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" letter-spacing="3">VIDEO WILL APPEAR HERE</text>
+</svg>
